@@ -1,0 +1,13 @@
+﻿Bài 3 : Sử dụng AI an toàn khi xử lý lỗi phần mềm 
+4. Yêu cầu đầu ra
+* Báo cáo phân tích (IPO): Xác định Input (Câu trả lời của AI), Process (Quy trình kiểm chứng bằng toán tử site:stackoverflow.com hoặc trang chủ phần mềm), Output (Xác nhận lệnh an toàn/không an toàn).
+-input: 
++rmdir /s /q "C:\Windows\System32"
+-process:
++site:stackoverflow.com "rmdir /s /q" "System32" Windows
+-output:
++Lệnh rmdir /s /q dùng để xóa thư mục và toàn bộ dữ liệu bên trong mà không yêu cầu xác nhận. Nếu thực hiện với thư mục System32, lệnh có nguy cơ làm hỏng hệ điều hành Windows, khiến máy tính bị lỗi hoặc không thể khởi động.
+-Thiết kế một câu lệnh (Prompt) "hỏi ngược lại" AI để yêu cầu nó giải thích độ an toàn của câu lệnh trước khi bạn thực thi.
+
+
+"Hãy phân tích câu lệnh rmdir /s /q trên Windows, giải thích chức năng, mức độ nguy hiểm và hậu quả có thể xảy ra khi thực thi. Lệnh này có an toàn không? Nếu không, hãy đề xuất cách thực hiện an toàn hơn trước khi tôi chạy trên máy tính."
